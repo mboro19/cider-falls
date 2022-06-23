@@ -1,0 +1,65 @@
+html{
+
+    min-height: 100vh;
+}
+
+body {
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+div{
+
+    
+    justify-content: center;
+}
+
+
+
+.column__1 {
+
+    
+    
+    border: 3px dotted black;
+    width: 200px;
+    height: auto;
+    
+
+}
+
+.column__2 {
+
+    
+    
+    border: 3px dotted black;
+    width: 200px;
+    height: auto;
+
+}
+
+.logo {
+    
+    border: 3px dotted purple;
+    width: 200px;
+    height:200px;
+}
+
+.bottom__info{
+
+    
+    height: 50px;
+    width: auto;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.section__bottom {
+
+    
+
+}
