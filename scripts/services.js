@@ -1,6 +1,7 @@
-import { dataServices } from "./database.js"
+import { dataLocations, dataServices } from "./database.js"
 
 let services = dataServices()
+let locations = dataLocations()
 
 // split ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -10,15 +11,21 @@ document.addEventListener(
 
         const itemClicked = clickEvent.target;
 
-        if (itemClicked.id.startsWith("location")) {
-            const [,locationId] = itemClicked.id.split("--")
+        if (itemClicked.id.startsWith("service")) {
+            const [,serviceId] = itemClicked.id.split("--")
                 
-                for(const location of locations){
+                for(const service of services){
+                    for(const location of locations){
+                        for(const serviceLoc of location.servicesId){
 
-                    if(location.id === parseInt(locationId)){
+                            if(serviceLoc === parseInt(serviceId)){
+        
+                    
+                            window.alert(`"This service is available in ${location.name}."`)
 
-            
-                    window.alert(`"This sections main attraction is the ${location.mainAttraction}."`)
+                        }
+                    }
+
                 }}}
             }
 );
@@ -31,7 +38,7 @@ export const servicesFunc = () => {
 
         for (let service of services){
 
-            html += `<li>${service.name}</li>`
+            html += `<li id="service--${service.id}>${service.name}</li>`
 
         }
 
