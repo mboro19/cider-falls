@@ -1,103 +1,176 @@
-export const database = [
+const database = {
     
-    guests = [
+    guests: [
         
     {
 
         id: 1,
-        name: "Tom Hanks",
+        firstName: "Tom",
+        lastName: "Hanks",
         locationId: 5,
 
     },
     {
 
         id: 2,
-        name: "Patrick Stewart",
+        firstName: "Patrick",
+        lastName: "Stewart",
         locationId: 3,
 
     },
     {
 
         id: 3,
-        name: "Cuba Gooding Jr",
+        firstName: "Cuba",
+        lastName: "Gooding Jr.",
         locationId: 1,
 
     },
     {
 
         id: 4,
-        name: "Mila Kunis",
+        firstName: "Mila",
+        lastName: "Kunis",
         locationId: 4,
 
     },
     {
 
         id: 5,
-        name: "John Travolta",
+        firstName: "John",
+        lastName: "Travolta",
         locationId: 6,
 
     },
     {
 
         id: 6,
-        name: "Jessica Biel",
+        firstName: "Jessica",
+        lastName: "Biel",
         locationId: 2,
 
-    }
+    },
+    {
+
+        id: 7,
+        firstName: "Ashton",
+        lastName: "Kutcher",
+        locationId: 2,
+
+    },
+    {
+
+        id: 8,
+        firstName: "Vin",
+        lastName: "Diesel",
+        locationId: 3,
+
+    },
+    {
+
+        id: 9,
+        firstName: "Marty",
+        lastName: "McFly",
+        locationId: 5,
+
+    },
+    {
+
+        id: 10,
+        firstName: "Willy",
+        lastName: "Wonka",
+        locationId: 1,
+
+    },
+    {
+
+        id: 11,
+        firstName: "Charlie",
+        lastName: "Brown",
+        locationId: 6,
+
+    },
+    {
+
+        id: 12,
+        firstName: "Mike",
+        lastName: "Jones",
+        locationId: 2,
+
+    },
+    {
+
+        id: 13,
+        firstName: "Martha",
+        lastName: "Stewart",
+        locationId: 1,
+
+    },
+    {
+
+        id: 14,
+        firstName: "Tiger",
+        lastName: "Woods",
+        locationId: 6,
+
+    },
+    {
+
+        id: 15,
+        firstName: "Aaron",
+        lastName: "Lewis",
+        locationId: 3,
+
+    },
 
         ],
     
     
-    locations = [
+    locations: [
         
     {
 
         id:1,
         name: "North West Section",
-        guestId: 3,
-        servicesId: null,
+        servicesId: [2,4,6],
         mainAttraction: "Lodge",
-        servicesOffered: "parking, information, picnicing"
+        
 
     },
     {
 
         id:2,
         name: "Northern Section",
-        guestId: 6,
-        servicesId: null,
+        servicesId: [1,2,10],
         mainAttraction: "Lost Wolf Hiking",
-        servicesOffered: "hiking, picnicing, rock climbing"
+        
 
     },
     {
 
         id:3,
         name: "North East Section",
-        guestId: 2,
-        servicesId: null,
+        servicesId: [7,8,9],
         mainAttraction: "Chamfort River",
-        servicesOffered: "rafting, canoeing, fishing"
+        
 
     },
     {
 
         id:4,
         name: "South West Section",
-        guestId: 4,
-        servicesId: null,
+        servicesId: [1,7],
         mainAttraction: "Gander River",
-        servicesOffered: "fishing and hiking"
+        
 
     },
     {
 
         id:5,
         name: "Southern Section",
-        guestId: 1,
-        servicesId: null,
+        servicesId: [4,5,6],
         mainAttraction: "Campgrouds",
-        servicesOffered: "information, lodging, parking"
+        
 
 
     },
@@ -105,29 +178,94 @@ export const database = [
 
         id:6,
         name: "South East Section",
-        guestId: 5,
-        servicesId: null,
+        servicesId: [1,2,3],
         mainAttraction: "Pine Bluff Trails",
-        servicesOffered: "hiking, picnicing, zip lines"
+        
 
     },
 
     ],
     
-    
-    services = [
-        
+    services: [
+
     {
-
         id: 1,
-        name: "",
-        guestId: null, 
-        sectionId: null,
+        name: "hiking",
+    
 
+    },
+    {
+        id: 2,
+        name: "picnicking",
+    
 
+    },
+    {
+        id: 3,
+        name: "zip lines",
+    
+
+    },
+    {
+        id: 4,
+        name: "information",
+    
+
+    },
+    {
+        id: 5,
+        name: "lodging",
+    
+
+    },
+    {
+        id: 6,
+        name: "parking",
+    
+
+    },
+    {
+        id: 7,
+        name: "fishing",
+    
+
+    },
+    {
+        id: 8,
+        name: "rafting",
+    
+
+    },
+    {
+        id: 9,
+        name: "canoeing",
+    
+
+    },
+    {
+        id: 10,
+        name: "rock climbing",
+    
 
     },
 
-],
 
-]
+
+
+    ]
+}
+
+export const dataGuests = () => { 
+    
+    return database.guests.map(guest => ({...guest}))
+}
+
+export const dataLocations = () => {
+
+    return database.locations.map(location => ({...location}))
+}
+
+export const dataServices = () => {
+
+    return database.services.map(service => ({...service}))
+}

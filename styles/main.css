@@ -18,34 +18,31 @@ div{
     justify-content: center;
 }
 
+.section__1{
 
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-direction: row;
+
+}
 
 .column__1 {
 
     
-    
+    display: flex;
     border: 3px dotted black;
     width: 200px;
     height: auto;
     
-
-}
-
-.column__2 {
-
     
-    
-    border: 3px dotted black;
-    width: 200px;
-    height: auto;
-
-}
+}    
 
 .logo {
     
-    border: 3px dotted purple;
-    width: 200px;
-    height:200px;
+    
+    width: 250px;
+    height:250px;
 }
 
 .bottom__info{
@@ -60,6 +57,7 @@ div{
 
 .section__bottom {
 
-    
+    display: flex;
+    justify-content: center;
 
 }
